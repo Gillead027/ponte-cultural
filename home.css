@@ -1,0 +1,67 @@
+﻿/* Apresentacao oficial da Ponte Cultural; estilos separados das paginas legais. */
+:root { color-scheme: dark; --bg: #080808; --text: #fafafa; --muted: #b6b6b6; --line: #303030; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; font-size: 1rem; line-height: 1.65; }
+a { color: inherit; text-underline-offset: .3em; }
+a:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; }
+.wrap { width: min(1180px, calc(100% - 80px)); margin-inline: auto; }
+.skip-link { position: absolute; top: -100px; left: 20px; padding: 12px 20px; background: white; color: black; z-index: 10; }
+.skip-link:focus { top: 12px; }
+.site-header { min-height: 112px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; flex-direction: column; font-weight: 900; font-size: 1.15rem; line-height: .95; letter-spacing: -.04em; text-decoration: none; }
+.brand span { margin-top: .28rem; font-size: .77rem; letter-spacing: .095em; }
+nav { display: flex; flex-wrap: wrap; gap: 28px; }
+nav a { font-size: .875rem; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 65px; align-items: center; padding-block: 30px 72px; }
+.eyebrow { font-size: .875rem; font-weight: 700; letter-spacing: .15em; margin: 0 0 24px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; line-height: 1.05; letter-spacing: -.055em; overflow-wrap: anywhere; }
+h1 { font-size: clamp(3.25rem, 5.8vw, 5.3rem); margin-bottom: 28px; }
+h1 em, h2 em { font-weight: 400; }
+.intro { max-width: 440px; color: var(--muted); font-size: 1.125rem; line-height: 1.7; margin-bottom: 30px; }
+.button { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; border-radius: 999px; padding: 12px 24px; font-weight: 700; text-decoration: none; background: #fff; color: #080808; }
+.button:hover { background: #dedede; }
+.release-note { font-size: .875rem; color: var(--muted); margin-top: 18px; max-width: 430px; }
+.hero-visual { min-height: 580px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 22px 24px 16px; background: #e5e5e5 url('assets/cultura.webp') center / cover; color: #111; }
+.visual-label { display: flex; width: 100%; justify-content: space-between; font-size: .75rem; font-weight: 800; letter-spacing: .1em; }
+.app-screen { width: 218px; height: auto; display: block; border: 5px solid #161616; border-radius: 28px; margin: 22px 0; box-shadow: 12px 15px 0 #00000015; }
+.visual-caption { font-size: .875rem; font-weight: 800; letter-spacing: .14em; margin: 0; }
+.culture-strip { border-block: 1px solid var(--line); text-align: center; padding: 21px 24px; }
+.culture-strip p { font-size: .875rem; font-weight: 700; letter-spacing: .13em; margin: 0; }
+.culture-strip span { padding-inline: 16px; color: #7e7e7e; }
+.section { padding-block: 90px; }
+.section-heading { max-width: 540px; }
+h2 { font-size: clamp(2.5rem, 4.2vw, 3.8rem); margin-bottom: 26px; }
+.section-heading > p:last-child { color: var(--muted); font-size: 1.125rem; }
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 50px; }
+.feature-grid article { border-top: 1px solid #676767; padding-top: 20px; }
+.feature-number { display: block; color: #b3b3b3; font-size: .875rem; margin-bottom: 30px; }
+h3 { font-size: 1.25rem; line-height: 1.3; letter-spacing: -.025em; margin-bottom: 14px; }
+.feature-grid p { color: var(--muted); margin: 0; }
+.browse-note { margin: 44px 0 0; padding: 22px 0; border-block: 1px solid var(--line); color: #d0d0d0; }
+.artist-section { background: #e9e9e9; color: #111; }
+.artist-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; padding-block: 82px; align-items: center; }
+.artist-inner h2 { margin-bottom: 0; }
+.artist-copy { max-width: 450px; font-size: 1.125rem; }
+.artist-copy p { margin-bottom: 20px; }
+.text-link { font-size: 1rem; font-weight: 700; }
+.contact-section { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; align-items: center; }
+.contact-copy > p:first-child { color: var(--muted); max-width: 400px; }
+.contact-email { font-size: clamp(1.25rem, 2vw, 1.65rem); overflow-wrap: anywhere; }
+.site-footer { border-top: 1px solid var(--line); padding-block: 34px; display: flex; flex-wrap: wrap; gap: 25px; align-items: center; justify-content: space-between; }
+.site-footer p { flex-basis: 100%; font-size: .875rem; color: var(--muted); margin: 12px 0 0; }
+@media (max-width: 1000px) {
+ .wrap { width: calc(100% - 48px); } .hero { gap: 32px; } .hero-visual { min-height: 535px; } .app-screen { width: 200px; }
+ .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 36px; } .artist-inner, .contact-section { gap: 36px; }
+}
+@media (max-width: 680px) {
+ .wrap { width: calc(100% - 40px); } .site-header { padding-block: 24px; min-height: 96px; gap: 20px; flex-wrap: wrap; }
+ nav { gap: 20px; } .site-header nav { width: 100%; justify-content: space-between; }
+ .hero { grid-template-columns: 1fr; gap: 35px; padding-block: 25px 42px; } h1 { font-size: clamp(3rem, 11vw, 4.5rem); }
+ .hero-visual { min-height: 540px; } .culture-strip { padding: 20px; } .culture-strip p { font-size: .75rem; line-height: 2; } .culture-strip span { padding-inline: 5px; }
+ .section { padding-block: 60px; } .feature-grid { grid-template-columns: 1fr; gap: 30px; margin-top: 36px; } .feature-number { margin-bottom: 16px; }
+ .artist-inner, .contact-section { grid-template-columns: 1fr; gap: 24px; } .artist-inner { padding-block: 60px; } .site-footer nav { flex-direction: column; gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
